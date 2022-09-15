@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>async await concept</h1>
+    <p>
+        1.async will be used only infront of function... <br>
+        async function name(){
+
+        } <br>
+        2.whatever values we give it will return only in promise type. <br>
+        3.await will be used inside of async & cant work in other place. <br>
+        4.instead of then here we are using await
+    </p>
+
+    <script>
+        // async function name() {
+        //     let promise = new Promise(function (resolve, reject) {
+        //         setTimeout(function () {
+        //             resolve(1000)
+        //         }, 1000)
+        //     })
+        //     let result = await promise;
+        //     console.log(result);
+        // }
+        // name();
+
+        // 
+        // let promise = new Promise((res, rej) => {
+        //     setTimeout(() => res(0), 1000);
+        // })
+        // console.log('a');
+        // promise
+        //     .then((data) => {
+        //         console.log(data);
+        //     })
+        //     .catch((err) => {
+        //         console.log(err);
+        //     });
+        //     console.log('b');
+        //     console.log('c');
+
+        // 
+        // let promise = new Promise((res, rej) => {
+        //     setTimeout(() => res(0), 1000);
+        // });
+        // async function fun() {
+        //     console.log('a');
+        //     let data = await promise;
+        //     console.log(data);
+        //     console.log('b');
+        //     console.log('c');
+        // }
+        // fun();
+        
+        // IIFE without defining function we are using this
+        let promise = new Promise((res, rej) => {
+            setTimeout(() => res(0), 1000);
+        });
+        (async function fun() {
+            console.log('a');
+            let data = await promise;
+            console.log(data);
+            console.log('b');
+            console.log('c');
+        })();
+
+
+    </script>
+</body>
+
+</html>
